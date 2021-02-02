@@ -1,17 +1,17 @@
-What is this project about?
+# What is this project about?
 This project explores the use of Convolutional Neural Networks to identify the classifications of krill from images regarding their sex and age. The project utilises krill data from the British AntarcticSurvey’s Western Core Box project.
 MatLab was used to code for this project. 
 
 The data for this project has not been uploaded to GitHub due to the size of the data set and augmented data sets which were stored and used locally to save computation time.
 
-Project Structure
+# Project Structure
 
-ClassSampler folder contains
+## ClassSampler folder contains
 
  - ClassSampler 
 This creates and saves duplicate images for training data, validation and testing. To create a balanced data set.
 
-CNNs folder contains
+## CNNs folder contains
 
  - vgg16_CNN
 Read the training, validation and testing data. Ran it through the vgg16 model and saved confusion matrix with the accuracy
@@ -20,13 +20,13 @@ and the trained network.
  - vgg16_Transfer_Learning
 Read the training, validation and testing data. Ran it through the vgg16 transfer learning model 
 and saved confusion matrix with the accuracy and the trained network.
- - CNNs -> Functions folder 
+ - Functions folder 
 This contained the confusion matrix producer function.
 Randon erase augmentation function.
 RunCNN where a classifier and data was inputted and it would return accuracy and store the confusion matrix and then trained network. 
 
 
-Data Extractor folder contains
+## Data Extractor folder contains
 
  - ClassFolderer
 Extracted file names from spreadsheet. Then foldered krill images into their respected classes folders which was saved
@@ -39,7 +39,7 @@ Then concatenates the lateral and dorsal images together and saves them in a new
  - SpreadsheetFixer
 Used to inject the word 'Board' into some of the dorsal view IDs. As they were missing.
 
-Functions
+## Functions
 
  - createEyeMask
 Creates mask to detect eye
@@ -53,7 +53,7 @@ Fucntion that inputs krill image and returns if it needs flipping or not
 inputs image with padding dimensions and displacement value. 
 The displacement value would randomise so that the image is randomly placed inside the padding.
 
-Image Modifier
+## Image Modifier
 
  - DataDistort
 This was used to add augmentation and padding to lateral images
